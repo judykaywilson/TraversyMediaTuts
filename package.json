@@ -1,0 +1,14 @@
+{
+  "name": "intro2sassnodenpmgithu",
+  "version": "1.0.0",
+  "description": "Sample Responsive Site",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Judy Wilson",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

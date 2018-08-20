@@ -1,16 +1,19 @@
-@import "config";
+@import 'config';
+@import 'menu';
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include background();
+  @include background;
+  background: $primary-color;
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
+
 //Headings
 h1,
 h2,
@@ -43,7 +46,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -51,7 +54,7 @@ main {
       padding: 0.4rem;
       &:hover {
         color: $secondary-color;
-        @include easeOut();
+        @include easeOut;
       }
     }
   }

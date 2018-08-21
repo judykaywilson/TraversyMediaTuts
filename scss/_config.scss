@@ -1,5 +1,5 @@
-$primary-color: rgb(19, 2, 49);
-$secondary-color: #f39b36;
+$primary-color: rgb(158, 226, 198);
+$secondary-color: #b3ffdf;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $portrait: url(../img/portrait.jpg);
@@ -29,6 +29,15 @@ $background-opacity: 0.9;
     }
   }
 }
+// Set text color variable when background lightness changes
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #252525;
+  } @else {
+    @return #fff;
+  }
+}
+
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;

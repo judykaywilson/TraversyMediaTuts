@@ -30,6 +30,17 @@
     transform: translate3d(-100%, 0, 0);
     @include easeOut;
   }
+  .about-info {
+    grid-gap: 10px;
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+    grid-template-columns: 1fr;
+  }
 }
 @include mediaSm {
   main#home h1 {

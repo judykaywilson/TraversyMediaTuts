@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 * {
   box-sizing: border-box;
@@ -46,8 +47,8 @@ header {
 }
 
 main {
-  padding: 4rem;
-  min-height: calc(100vh - 60px);
+  padding: 0 2rem;
+  //min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;

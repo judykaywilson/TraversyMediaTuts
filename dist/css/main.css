@@ -1,5 +1,5 @@
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   right: 35px;
   top: 35px;
@@ -172,10 +172,43 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background-color: lighten #9ee2c6, 5;
+    background-color: #a6e4cb;
     padding: 0.5rem;
     border-bottom: #b3ffdf 5px solid;
     margin-bottom: 1rem; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #b3ffdf;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #b3ffdf;
+    color: set-text-color #b3ffdf; }
+
+.btn-dark {
+  background: #1e6347;
+  color: #fff; }
+  .btn-dark i {
+    margin-right: 0.5rem; }
+
+.btn-light {
+  background: white;
+  color: #252525; }
+  .btn-light i {
+    margin-right: 0.5rem; }
 
 #main-footer {
   text-align: center;
@@ -190,6 +223,14 @@ main {
       #main-footer .icons a:hover {
         color: #b3ffdf;
         transition: all 0.5s ease-out; }
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (max-width: 1199px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -217,12 +258,19 @@ main {
   .about-info {
     grid-gap: 10px;
     grid-template-areas: 'bioimage' 'bio' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
+  main#work h1 {
+    margin-top: 12vh;
+    text-align: center; }
   .portrait {
     width: 100px;
     height: 100px;
-    background: url(../img/portrait_small.jpg) no-repeat; } }
+    background: url(../img/portrait_small.jpg) no-repeat; }
+  .projects {
+    grid-template-columns: 1fr; } }
